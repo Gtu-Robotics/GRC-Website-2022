@@ -9,6 +9,25 @@ let auto = false;
 const intervalTime = 5000;
 let slideInterval;
 
+let lightSchemeIcon = document.querySelector('link#light-scheme-icon');
+let darkSchemeIcon = document.querySelector('link#dark-scheme-icon');
+
+matcher = window.matchMedia('(prefers-color-scheme: dark)');
+matcher.addListener(onUpdate);
+onUpdate();
+
+
+
+function onUpdate() {
+    if (matcher.matches) {
+        lightSchemeIcon.remove();
+        document.head.append(darkSchemeIcon);
+    } else {
+        document.head.append(lightSchemeIcon);
+        darkSchemeIcon.remove();
+    }
+}
+
 const nextSlide = () => {
     // Get current class
     const current = document.querySelector('.current');

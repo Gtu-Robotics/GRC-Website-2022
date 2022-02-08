@@ -96,21 +96,6 @@ body {
     font-size: 1.8em;
 }
 
-#home .button {
-    font-size: 18px;
-    text-decoration: none;
-    color: #ffffff;
-    border: #ffffff 1px solid;
-    padding: 10px 20px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-#home .button:hover {
-    background-color: #ffffff;
-    color: #000080;
-}
-
 #home .button:active {
     background-color: #FF9933;
     border-color: #FF9933;
@@ -148,6 +133,30 @@ body {
     text-align: center;
 }
 
+#resources {
+    height: 100vh;
+    height: fit-content;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#resources p {
+   font-size: 2em;
+}
+
+#resources ul {
+    font-size: 2em;
+}
+
+#resources h2 {
+    font-size: 3em;
+    text-align: center;
+}
+
 #achievements {
     height: 100vh;
 }
@@ -160,6 +169,7 @@ body {
 #about-us {
     max-height: fit-content;
     height: fit-content;
+    justify-content: center;
 }
 
 #about-us h2 {
@@ -167,9 +177,25 @@ body {
     text-align: center;
 }
 
+#about-us .button {
+    font-size: 18px;
+    text-decoration: none;
+    color: #ffffff;
+    border: #ffffff 1px solid;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#about-us .button:hover {
+    background-color: #ffffff;
+    color: #141414;
+}
+
 #contact-us {
     height: fit-content;
-    max-height: fit-content;
+    /* max-height: fit-content; */
+    height: 65vh;
 }
 
 #contact-us h2 {
@@ -234,7 +260,7 @@ body {
 }
 
 #contact-us ul li {
-    margin: 0 1rem;
+    margin: 4rem 8rem;
     padding: 1rem;
 }
 
@@ -319,6 +345,10 @@ body {
     padding: 20px 8%;
 }
 
+.intro {
+    align-items: center;
+}
+
 .slide {
     position: absolute;
     top: 0;
@@ -385,12 +415,133 @@ body {
     padding: 0px 40px;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .navbar {
         flex-wrap: wrap;
     }
     #home p {
-        font-size: 18pxem;
+        font-size: 18px;
+    }
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        background-color: rgba(18, 18, 18, 1);
+    }
+    .navbar ul.show {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+        margin: 5px 15px;
+    }
+    .sections {
+        padding-top: 15%;
+    }
+    .container-do {
+        flex-direction: column;
+        display: block;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+    #panorama {
+        display: none;
+        /* width: 90%;
+        height: 75vh;
+        /* flex: 1; */
+        /* margin: 20px 2%; */
+    }
+    .what-we-do-content {
+        /* flex: 1; */
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-top: 20px;
+        font-size: 18px;
+    }
+    .cols {
+        display: block;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding: 2% 15%;
+    }
+    .slider {
+        /* bottom: -300px;
+        left: 0;
+        width: 95%; */
+        display: none;
+    }
+    .slide.current .content {
+        transform: translateY(-300px);
+    }
+    #about-us {
+        height: fit-content;
+        max-height: fit-content;
+        flex-direction: column;
+        display: block;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+    #about-us p {
+        font-size: 18px;
+    }
+    .sponsors ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .sponsors ul li a img {
+        width: 230px;
+        height: 170px;
+        padding: 10px 10px;
+    }
+    #contact-us h2 {
+        font-size: 2em;
+        padding: 20px 0;
+    }
+    #contact-us p {
+        font-size: 18px;
+    }
+    #contact-us ul {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #footer {
+        position: relative;
+    }
+    #footer p {
+        position: relative;
+        bottom: 0;
+    }
+    #achievements {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1500) {
+    .sponsors ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .sponsors ul li a img {
+        width: 160px;
+        height: 100px;
+        padding: 5px 5px;
+    }
+    .navbar {
+        flex-wrap: wrap;
+    }
+    #home p {
+        font-size: 18px;
     }
     .navbar ul {
         display: none;
@@ -470,10 +621,23 @@ body {
     }
     #contact-us h2 {
         font-size: 2em;
-        padding: 20px 0;
+        padding: 10px 0;
     }
     #contact-us p {
-        font-size: 18px;
+        font-size: 14px;
+    }
+    #contact-us ul {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    #footer {
+        position: relative;
+    }
+    #footer p {
+        position: relative;
+        bottom: 0;
     }
 }
 
@@ -482,28 +646,35 @@ body {
 
 .slide:first-child {
     background: url('../images/slide_1.JPG') no-repeat center center/cover;
+    background-size: 100% 100%;
 }
 
 .slide:nth-child(2) {
     background: url('../images/slide_3.JPG') no-repeat center center/cover;
+    background-size: 100% 100%;
 }
 
 .slide:nth-child(3) {
     background: url('../images/slide_4.jpg') no-repeat center center/cover;
+    background-size: 100% 100%;
 }
 
 .slide:nth-child(4) {
     background: url('../images/slide_5.jpg') no-repeat center center/cover;
+    background-size: 100% 100%;
 }
 
 .slide:nth-child(5) {
     background: url('../images/slide_6.JPG') no-repeat center center/cover;
+    background-size: 100% 100%;
 }
 
 .slide:nth-child(6) {
     background: url('../images/slide_7.png') no-repeat center center/cover;
+    background-size: 100% 100%;
 }
 
 .slide:nth-child(7) {
     background: url('../images/slide_8.jpg') no-repeat center center/cover;
+    background-size: 100% 100%;
 }
